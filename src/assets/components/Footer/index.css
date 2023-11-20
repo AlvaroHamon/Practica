@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.iconos {
+  display: flex;
+  gap: 10px;
+}
+.icono {
+  width: 30px;
+}

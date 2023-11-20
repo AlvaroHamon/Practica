@@ -1,0 +1,11 @@
+nav {
+  padding: 20px;
+  border: 1px solid black;
+  background-color: aquamarine;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+.contenedorReg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.formularioReg {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
