@@ -1,11 +1,8 @@
 footer {
   display: flex;
-  position: absolute;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
-  width: 100%;
-  border: 1px solid black;
+  height: 60px;
   background-color: aquamarine;
   padding: 20px;
 }
