@@ -16,7 +16,7 @@ export default function Registro() {
           identificador="apellido"
           tipo="text"
           nombre="Apellido"
-          placeholder="Ingrese su apellido"
+          placeholder="Ingrese su apellido completo"
         />
         <Campo
           identificador="email"
