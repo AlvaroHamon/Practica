@@ -4,21 +4,29 @@ import "./tarjetas.css";
 import { useEffect, useState } from "react";
 
 const Tarjetas = () => {
-  const [datos, setDatos] = useState([]);
-  const [imagen, setImagen] = useState([]);
+  //datos para la solicitud a la api
   const timestamp = 1;
   const key = "f1213e3b7cd76bc1318e3e426304997c";
   const hash = "7de8a3085cce2ba453998e9e1f638562";
   const url = `https://gateway.marvel.com:443/v1/public/comics?ts=${timestamp}&apikey=${key}&hash=${hash}`;
 
+  // variable useState para almacernar los datos recibidos por la Api
+  const [datos, setDatos] = useState([]);
+  //datos useState de prueba para ejemplo
+  // const [titulo, setTitulo] = useState("");
+  // const [imagen, setImagen] = useState("");
+
+  //lamado a la API
   useEffect(() => {
     const solicitud = async () => {
       try {
         const respuesta = await axios.get(url);
-        console.log(respuesta.data.data.results[3]);
-        setDatos(respuesta.data.data.results[3]);
-        setImagen(respuesta.data.data.results[3].images[0].path);
-        console.log(respuesta.data.data.results[3].images[0].path);
+        setDatos(respuesta.data.data.results);
+
+        //datos de prueba para ejemplo
+        // const comic = respuesta.data.data.results[3];
+        // setTitulo(comic.title);
+        // setImagen(`${comic.thumbnail.path}/portrait_uncanny.jpg`);
       } catch (error) {
         console.log("error: " + error);
       }
@@ -28,26 +36,20 @@ const Tarjetas = () => {
 
   return (
     <main className="contenedor">
-      <Tarjeta
-        ruta="https://cdn.marvel.com/u/prod/marvel/i/mg/3/30/6531859313abc/portrait_uncanny.jpg"
-        titulo="titulo del comic"
+      {datos.map((item) => (
+        <Tarjeta
+          key={item.id}
+          titulo={item.title}
+          ruta={`${item.thumbnail.path}/portrait_uncanny.jpg`}
+        />
+      ))}
+
+      {/* TARJETA DE PRUEBA PARA EJEMPLO*/}
+      {/* <Tarjeta
+        ruta={imagen}
+        titulo={titulo}
         descripcion="descripcion del comic"
-      />
-      <Tarjeta
-        ruta="https://cdn.marvel.com/u/prod/marvel/i/mg/5/d0/651c3e3b55c03/portrait_uncanny.jpg"
-        titulo="titulo del comic"
-        descripcion="descripcion del comic"
-      />
-      <Tarjeta
-        ruta={imagen + "/portrait_xlarge.jpg"}
-        titulo={datos.title}
-        descripcion="descripcion del comic"
-      />
-      <Tarjeta
-        ruta="https://cdn.marvel.com/u/prod/marvel/i/mg/5/d0/651c3e3b55c03/portrait_uncanny.jpg"
-        titulo="titulo del comic"
-        descripcion="descripcion del comic"
-      />
+      /> */}
     </main>
   );
 };
