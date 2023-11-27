@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Boton from "../../elements/Boton/Boton";
 import Campo from "../../elements/Campo/Campo";
 import "./login.css";
@@ -21,8 +22,12 @@ export default function Login() {
             placeholder="Ingrese su contraseña"
           />
           <Boton texto="Iniciar Sesión" />
-          <p>
-            No tienes cuenta, <a href="#">Crear una</a>.
+          <p className="parrafo">
+            No tienes cuenta,{" "}
+            <Link to="/registro" className="linklogin">
+              Crear una
+            </Link>
+            .
           </p>
         </form>
       </main>

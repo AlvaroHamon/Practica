@@ -1,0 +1,12 @@
+.tarjeta {
+  width: 200px;
+  height: 350px;
+  box-shadow: 1px 1px 10px black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.img-tarjeta {
+  width: 100%;
+  border-radius: 15px;
+}

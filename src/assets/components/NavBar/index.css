@@ -2,5 +2,27 @@
   padding: 20px;
   background-color: aquamarine;
   display: flex;
+
+  /* justify-content: space-between; */
+}
+
+nav {
+  width: 100%;
+}
+ul {
+  display: flex;
   justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  background-color: darkseagreen;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.125rem;
 }

@@ -1,0 +1,9 @@
+.contenedor {
+  display: flex;
+  margin: 20px;
+  /* border: 1px solid black; */
+  height: 370px;
+  flex: 1;
+  gap: 20px;
+  flex-wrap: wrap;
+}
