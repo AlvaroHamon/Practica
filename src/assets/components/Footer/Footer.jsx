@@ -3,7 +3,7 @@ import "./index.css";
 export default function Footer() {
   return (
     <footer>
-      <div>Desarrollado por: Alvaro Hamon</div>
+      <div className="info-desarrollador">Desarrollado por: Alvaro Hamon</div>
       <div className="iconos">
         <a target="_blank" href="https://github.com/AlvaroHamon">
           <svg

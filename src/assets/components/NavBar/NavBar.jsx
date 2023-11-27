@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import HomeIcon from "@mui/icons-material/Home";
 import "./index.css";
-import Boton from "../../elements/Boton/Boton";
 
 const NavBar = () => {
   return (
@@ -8,14 +8,15 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/" className="link">
+            <NavLink to="/" className="link" activeclassname="active">
+              <HomeIcon />
               Inicio
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="login" className="link">
+            <NavLink to="login" className="link" activeclassname="active">
               Iniciar sesion
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

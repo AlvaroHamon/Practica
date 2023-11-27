@@ -5,8 +5,8 @@ import "./login.css";
 
 export default function Login() {
   return (
-    <>
-      <main className="contenedorLog">
+    <main className="contenedorprincipal">
+      <div className="contenedorLog">
         <h2>Iniciar Sesión</h2>
         <form className="formularioLog">
           <Campo
@@ -30,7 +30,7 @@ export default function Login() {
             .
           </p>
         </form>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }

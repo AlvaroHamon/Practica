@@ -5,11 +5,13 @@ footer {
   height: 60px;
   background-color: aquamarine;
   padding: 20px;
+  border-top: 1px solid #ccc;
 }
 
 .iconos {
   display: flex;
   gap: 10px;
+  margin-bottom: 5px;
 }
 .icono {
   width: 30px;
