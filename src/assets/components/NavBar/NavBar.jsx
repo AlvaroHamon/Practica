@@ -14,8 +14,11 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
+            <h3>Marvel</h3>
+          </li>
+          <li>
             <NavLink to="login" className="link" activeclassname="active">
-              Iniciar sesion
+              Iniciar Sesión
             </NavLink>
           </li>
         </ul>

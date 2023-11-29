@@ -9,7 +9,7 @@ const Tarjeta = (props) => {
     <div className="tarjeta">
       <img src={props.ruta} alt={props.titulo} className="img-tarjeta" />
       <h5>{props.titulo}</h5>
-      <p>{props.descripcion}</p>
+      {/* <a href={props.descripcion}>Ver Mas</a> */}
       {fav ? (
         <FavoriteIcon
           style={{ color: "red", cursor: "pointer" }}
