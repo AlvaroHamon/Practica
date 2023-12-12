@@ -1,0 +1,29 @@
+.contenedordetalle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentdetail {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  padding: 15px;
+  background-color: #eeeeee;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.contentdetail,
+.contentdetail img {
+  border-radius: 15px;
+  max-width: 90%;
+}
+
+.descriptiondetail {
+  padding: 2rem;
+}

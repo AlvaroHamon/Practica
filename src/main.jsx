@@ -7,6 +7,9 @@ import Login from "./assets/components/Login/Login";
 import Registro from "./assets/components/Registro/Registro";
 import Footer from "./assets/components/Footer/Footer";
 import "./index.css";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Detail from "./assets/components/Detail/Detail";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Tarjetas />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
+        <Route path="/detalle/:id" element={<Detail />} />
       </Routes>
     </Router>
     <Footer />

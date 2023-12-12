@@ -4,12 +4,8 @@
 }
 
 #root {
-  --primario: #8fbc8f;
-  --primario-oscuro: #228b22;
-
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  min-height: 100vh;
   background-color: #f8f8f8;
 }
