@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Boton from "../../elements/Boton/Boton";
 import Campo from "../../elements/Campo/Campo";
 import "./login.css";
@@ -42,9 +42,9 @@ export default function Login() {
           <Boton texto="Iniciar Sesión" />
           <p className="parrafo">
             No tienes cuenta,{" "}
-            <Link to="/registro" className="linklogin">
+            <NavLink to="/registro" className="linklogin">
               Crear una
-            </Link>
+            </NavLink>
             .
           </p>
         </form>
