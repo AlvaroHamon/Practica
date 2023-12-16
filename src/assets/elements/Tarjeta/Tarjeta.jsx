@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 const Tarjeta = (props) => {
+  const { categoria } = useParams();
   return (
     <>
       <div className="card col" style={{ width: "15rem" }}>
@@ -12,7 +13,10 @@ const Tarjeta = (props) => {
         />
         <div className="card-body">
           <h5 className="card-title">{props.titulo}</h5>
-          <NavLink to={`/detalle/${props.id}`} className="btn btn-danger">
+          <NavLink
+            to={`/detalle/${categoria}/${props.id}`}
+            className="btn btn-danger"
+          >
             More Information
           </NavLink>
         </div>

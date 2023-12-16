@@ -7,6 +7,8 @@ export default function Campo(props) {
           type={props.tipo}
           id={props.identificador}
           placeholder={props.placeholder}
+          onChange={props.onChange}
+          value={props.value}
         />
         <label htmlFor={props.identificador}>{props.nombre}</label>
       </div>

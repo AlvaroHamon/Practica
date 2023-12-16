@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../../services/useContext";
 
 const NavBar = () => {
+  const { handleLogout, login } = useAuth();
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-danger">
@@ -19,30 +21,47 @@ const NavBar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link text-bg-danger" href="#">
-                  Comics
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-bg-danger" href="#">
-                  Series
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-bg-danger" href="#">
-                  Personajes
-                </a>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link text-bg-danger" to="/login">
-                  Iniciar Sesión
-                </NavLink>
-              </li>
-            </ul>
-          </div>
+          {login && (
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <NavLink
+                    className="nav-link text-bg-danger"
+                    to="contenedor/comics"
+                  >
+                    Comics
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    className="nav-link text-bg-danger"
+                    to={`contenedor/series`}
+                  >
+                    Series
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    className="nav-link text-bg-danger"
+                    to="contenedor/characters"
+                  >
+                    Personajes
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    className="nav-link text-bg-danger"
+                    to="/"
+                    onClick={() => {
+                      handleLogout();
+                    }}
+                  >
+                    Cerrar Sesión
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
     </>
